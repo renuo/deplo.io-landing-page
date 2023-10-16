@@ -1,3 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+:root {
+    --bg-primary: #1D1F4F;
+
+    --btn-gradient: linear-gradient(90deg, #CBFEDA 0%, #97BDFD 100%);
+    --radius-1: 5px;
+    --radius-2: 10px;
+    --radius-3: 15px;
+    --radius-4: 20px;
+
+    --padding-1: 5px;
+    --padding-2: 10px;
+    --padding-3: 15px;
+
+    --color-dark: black;
+    --color-light: white;
+}
+
 body {
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--color-dark)
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: var(--padding-1);
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.navbar div {
+    display: inline-flex;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+}
+
+
+.btn {
+    border-radius: var(--radius-4);
+    padding: var(--padding-2);
+    padding-left: 15px;
+    padding-right: 15px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+a.btn-test {
+    padding-left: 30px;
+    padding-right: 30px;
+    background: var(--bg-primary);
+    color: var(--color-light);
+    font-weight: bold;
+    display: block;
+}
+
+.btn-login {
+    background: var(--btn-gradient);
+    text-transform: uppercase;
+    display: block;
 }
