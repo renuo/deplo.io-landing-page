@@ -55,51 +55,6 @@ h4 {
     overflow-x: hidden;
 }
 
-/* Util */
-
-.flex {
-    display: flex;
-}
-
-.flex-row {
-    flex-direction: row;
-}
-
-.flex-center {
-    justify-content: center;
-}
-
-.btn {
-    border-radius: var(--radius-btn);
-    padding: var(--padding-2);
-    padding-left: 15px;
-    padding-right: 15px;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-.btn-primary {
-    padding-left: 30px;
-    padding-right: 30px;
-    background: var(--bg-primary);
-    color: var(--color-light) !important;
-    font-weight: bold;
-    display: block;
-}
-
-.btn-secondary {
-    border: 2px solid var(--bg-primary);
-}
-
-
-.card {
-    background-color: var(--bg-primary);
-    color: var(--color-light);
-    padding: var(--padding-3);
-    font-size: 2em;
-    border-radius: 20px;
-}
-
 /* Navbar */
 
 .navbar {
@@ -141,14 +96,31 @@ h4 {
 
 /* section-intro */
 
-.img-wave {
-    margin-top: -15rem;
-    margin-left: 15rem;
-}
+.section-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.section-intro h1 {
-    font-weight: bold;
-    font-size: 2rem;
+    & .img-wave-logo {
+        margin-top: -10rem;
+        object-fit: cover;
+        max-width: 70rem;
+    }
+
+    & .img-swiss-made {
+        max-width: 20rem;
+    }
+
+    & .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    & h1 {
+        font-weight: bold;
+        font-size: 2rem;
+    }
 }
 
 /* section-tech */
@@ -176,7 +148,9 @@ h4 {
     display: flex;
     align-items: center;
 }
-.list { }
+
+.list {
+}
 
 .list li {
     border-bottom: 2px solid var(--bg-primary);
@@ -185,3 +159,60 @@ h4 {
 .logo-container {
     justify-content: center;
 }
+
+/* Util */
+
+.debug {
+    border: 5px dashed blue;
+    background-color: lightblue;
+}
+
+.debug2 {
+    border: 5px dashed rebeccapurple;
+    background-color: lightgreen;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.btn {
+    border-radius: var(--radius-btn);
+    padding: var(--padding-2);
+    padding-left: 15px;
+    padding-right: 15px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+a.btn-primary,
+button.btn-primary {
+    padding-left: 30px;
+    padding-right: 30px;
+    background: var(--bg-primary);
+    color: var(--color-light);
+    font-weight: bold;
+    display: block;
+}
+
+.btn-secondary {
+    border: 2px solid var(--bg-primary);
+}
+
+
+.card {
+    background-color: var(--bg-primary);
+    color: var(--color-light);
+    padding: var(--padding-3);
+    font-size: 2em;
+    border-radius: 20px;
+}
+
