@@ -197,13 +197,18 @@ strong {
     & .img-logo2 {
         object-fit: cover;
         width: 150%;
-        margin-top: -15rem;
-        margin-left: 5rem;
+        top: -12rem;
+        left: 5rem;
+
+        position: absolute;
     }
 
     & .certificate-col {
         gap: 3rem;
         overflow: hidden;
+        position: relative;
+
+        justify-content: flex-end;
     }
 }
 
