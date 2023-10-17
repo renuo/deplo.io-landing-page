@@ -1,5 +1,6 @@
 :root {
     --bg-primary: #1D1F4F;
+    --bg-secondary: #0F1326;
 
     --btn-gradient: linear-gradient(90deg, #CBFEDA 0%, #97BDFD 100%);
     --radius-btn: 20px;
@@ -193,6 +194,7 @@ strong {
         & h3 {
             margin-bottom: 1rem;
         }
+
         padding: 0 0 1rem 0;
         margin-bottom: 1.5rem;
     }
@@ -282,6 +284,28 @@ strong {
         & h2 {
             margin-bottom: 2rem;
         }
+    }
+}
+
+/* Footer */
+
+.footer {
+    &,
+    & a {
+        color: var(--color-light);
+    }
+
+    & > div {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    & .footer-top {
+        background-color: var(--bg-primary);
+    }
+
+    & .footer-bottom {
+        background-color: var(--bg-secondary);
     }
 }
 
