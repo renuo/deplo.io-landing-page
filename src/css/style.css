@@ -10,6 +10,9 @@
 
     --color-dark: black;
     --color-light: white;
+
+
+    --content-width: 1200px;
 }
 
 body, body * {
@@ -63,7 +66,7 @@ strong {
 }
 
 .content {
-    max-width: 1200px;
+    max-width: var(--content-width);
     overflow-x: visible;
 }
 
@@ -246,7 +249,7 @@ strong {
 }
 
 
-/* Vergleichstabelle */
+/* section comparison */
 
 .section-comparison {
     background-color: var(--bg-primary);
@@ -256,6 +259,30 @@ strong {
     align-items: center;
     border-radius: 2rem;
     margin: 3rem 0;
+}
+
+/* section support */
+
+.section-support {
+    background: url("../../assets/images/Swiss Flag.png");
+    background-size: 100%;
+    flex-direction: row;
+    --margin: calc(-1 * calc(100vw - var(--content-width)) / 2);
+
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+
+    padding: 5rem calc(-1 * var(--margin));
+
+    height: 30rem;
+
+    & .textcol {
+        text-align: center;
+
+        & h2 {
+            margin-bottom: 2rem;
+        }
+    }
 }
 
 /* Util */
@@ -314,5 +341,9 @@ button.btn-primary {
     padding: 1.5rem;
     font-size: 2em;
     border-radius: 20px;
+}
+
+.col {
+    flex: 1;
 }
 
