@@ -6,8 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Deplo.io</title>
+    <!--    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">-->
     <link rel="stylesheet" href="assets/stylesheets/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script>(function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({
@@ -27,16 +27,22 @@
     <div class="content">
         <header>
             <nav class="navbar">
-                <a href="#" class="btn btn-primary">Jetzt Testen</a>
-                <div class="flex flex-center">
-                    <a href="#">Artikel</a>
-                    <a href="#">Community</a>
-                    <a href="#">Status</a>
-                </div>
-                <div>
-                    <a href="#" class="btn btn-login">Sign In</a>
-                    <a href="#" class="btn btn-login">Sign Up</a>
-                </div>
+                <ul class="flex flex-center">
+                    <li><a href="#" class="btn btn-primary">Jetzt Testen</a></li>
+                    <li class="flex flex-center">
+                        <ul class="flex-center">
+                            <li><a class="navbar-link" href="#">Artikel</a></li>
+                            <li><a class="navbar-link" href="#">Community</a></li>
+                            <li><a class="navbar-link" href="#">Status</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="flex-row">
+                            <li><a href="#" class="navbar-link btn btn-login">Sign In</a></li>
+                            <li><a href="#" class="navbar-link btn btn-login">Sign Up</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
         </header>
 
