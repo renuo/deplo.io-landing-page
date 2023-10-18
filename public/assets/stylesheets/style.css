@@ -1,0 +1,323 @@
+:root {
+  --bg-primary: #1D1F4F;
+  --bg-secondary: #0F1326;
+  --btn-gradient: linear-gradient(90deg, #CBFEDA 0%, #97BDFD 100%);
+  --radius-btn: 20px;
+  --padding-1: 5px;
+  --padding-2: 10px;
+  --padding-3: 15px;
+  --color-dark: black;
+  --color-light: white;
+  --content-width: 1200px;
+}
+
+body, body * {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--bg-primary);
+  padding: var(--padding-3);
+  flex-direction: column;
+  font-size: 1.3em;
+  background: white;
+}
+
+h2 {
+  font-size: 2rem;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+h4 {
+  display: block;
+  font-size: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+p {
+  line-height: 1.3;
+}
+
+strong {
+  font-weight: bold;
+  display: inline !important;
+}
+
+.content-wrapper {
+  max-width: 100vw;
+  overflow-x: visible;
+}
+
+.content {
+  max-width: var(--content-width);
+  overflow-x: visible;
+}
+
+.seo {
+  display: none;
+}
+
+/* Navbar */
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.navbar, .navbar * {
+  flex-direction: row;
+  gap: 10px;
+}
+.navbar a {
+  color: var(--color-dark);
+}
+.navbar ul {
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: var(--padding-1);
+}
+.navbar li {
+  display: inline-block;
+}
+.navbar div {
+  display: inline-flex;
+}
+
+.btn-login {
+  background: var(--btn-gradient);
+  text-transform: uppercase;
+  display: block;
+  padding: 0 0.5rem;
+  font-size: 0.7rem;
+}
+
+/* section-intro */
+.section-intro {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.section-intro .img-wave-logo {
+  margin-top: -6rem;
+  object-fit: cover;
+  max-width: 70rem;
+}
+.section-intro .img-swiss-made {
+  max-width: 15rem;
+}
+.section-intro .logo-container {
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.section-intro h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* section-tech */
+.section-tech {
+  flex-direction: row;
+  justify-content: center;
+  gap: 75px;
+}
+.section-tech p {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.section-tech > div {
+  width: 50%;
+  overflow: hidden;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 15px;
+}
+.tech-grid .card {
+  justify-content: center;
+  align-items: center;
+}
+.tech-grid img {
+  max-width: 100%;
+  max-height: 4rem;
+  object-fit: contain;
+}
+
+/* section-recommendations */
+.section-recommendations {
+  flex-direction: row;
+  gap: 75px;
+}
+.section-recommendations .col {
+  flex: 1;
+  width: 50%;
+}
+.section-recommendations li {
+  padding: 0 0 1rem 0;
+  margin-bottom: 1.5rem;
+}
+.section-recommendations li h3 {
+  margin-bottom: 1rem;
+}
+.section-recommendations .img-logo2 {
+  object-fit: cover;
+  width: 150%;
+  top: -12rem;
+  left: 5rem;
+  position: absolute;
+}
+.section-recommendations .certificate-col {
+  gap: 3rem;
+  overflow: hidden;
+  position: relative;
+  justify-content: flex-end;
+}
+
+.certificate {
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 2rem;
+  background-color: var(--bg-primary);
+  color: var(--color-light);
+  border-top-left-radius: 6rem;
+  border-bottom-left-radius: 6rem;
+}
+.certificate .img-certificate {
+  width: 5rem;
+  margin: 1rem;
+}
+
+.content-wrapper {
+  align-items: center;
+}
+
+.list li {
+  border-bottom: 2px solid var(--bg-primary);
+}
+
+.logo-container {
+  justify-content: center;
+}
+
+/* section comparison */
+.section-comparison {
+  background-color: var(--bg-primary);
+  color: var(--color-light);
+  padding: 10rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  margin: 3rem 0;
+}
+
+/* section support */
+.section-support {
+  background: url("../../assets/images/Swiss Flag.png");
+  background-size: 100%;
+  flex-direction: row;
+  --margin: calc(-1 * calc(100vw - var(--content-width)) / 2);
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+  padding: 5rem calc(-1 * var(--margin));
+  height: 30rem;
+}
+.section-support .textcol {
+  text-align: center;
+}
+.section-support .textcol h2 {
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+.footer, .footer a {
+  color: var(--color-light);
+}
+.footer > div {
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer .footer-top {
+  background-color: var(--bg-primary);
+}
+.footer .footer-bottom {
+  background-color: var(--bg-secondary);
+}
+
+/* Util */
+.debug {
+  border: 5px dashed blue;
+  background-color: lightblue;
+}
+
+.debug2 {
+  border: 5px dashed rebeccapurple;
+  background-color: lightgreen;
+}
+
+.debug3 {
+  border: 5px dashed fuchsia;
+  background-color: cadetblue;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.btn {
+  border-radius: var(--radius-btn);
+  padding: var(--padding-2);
+  padding-left: 15px;
+  padding-right: 15px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+a.btn-primary,
+button.btn-primary {
+  padding-left: 30px;
+  padding-right: 30px;
+  background: var(--bg-primary);
+  color: var(--color-light);
+  font-weight: bold;
+  display: block;
+}
+
+.btn-secondary {
+  border: 3px solid var(--bg-primary);
+  font-weight: bold;
+}
+
+.card {
+  background-color: var(--bg-primary);
+  color: var(--color-light);
+  padding: 1.5rem;
+  font-size: 2em;
+  border-radius: 20px;
+}
+
+.col {
+  flex: 1;
+}
+
+/*# sourceMappingURL=style.css.map */
