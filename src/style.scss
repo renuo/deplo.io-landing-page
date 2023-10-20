@@ -2,7 +2,11 @@
 
 $bg-primary: #1d1f4f;
 $bg-secondary: #0f1326;
-$text-light: rgb(196, 195, 195);
+$btn-gradient-primary: #cbfeda;
+$btn-gradient-secondary: #97bdfd;
+$btn-gradient: linear-gradient(90deg, $btn-gradient-primary 0%, $btn-gradient-secondary 100%);
+$text-light: #fff;
+$text-lighter: rgb(196, 195, 195);
 
 :root {
   --section-gap: 2rem;
@@ -22,7 +26,7 @@ body {
 }
 
 nav {
-  background-color: lightblue;
+  margin-top: 1rem;
 }
 
 article {
@@ -77,8 +81,7 @@ p {
 }
 
 section.section-comparison {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding: 5rem 0;
 }
 
 section.section-support {
@@ -107,6 +110,18 @@ section.section-support {
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.text-dim {
+  color: $text-lighter !important;
+}
+
 .reduced-width {
   min-width: calc(min(100%, var(--content-width)));
   max-width: var(--content-width);
@@ -130,6 +145,27 @@ section.section-support {
   }
 }
 
+.bg-gradient {
+  background: $btn-gradient;
+  color: $text-light;
+}
+
+.btn {
+
+  border-radius: 5rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &-sm.btn {
+    padding: 0.3rem 1rem;
+  }
+
+  &-lg.btn {
+    padding: 1rem 4rem;
+  }
+}
+
 @media screen and (max-width: 800px) {
   :root {
     --content-width: 100%;
@@ -139,5 +175,9 @@ section.section-support {
 
   .columns {
     flex-direction: column;
+  }
+  
+  .section-support {
+    background-size:auto;
   }
 }

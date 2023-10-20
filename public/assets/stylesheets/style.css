@@ -17,7 +17,7 @@ body {
 }
 
 nav {
-  background-color: lightblue;
+  margin-top: 1rem;
 }
 
 article {
@@ -66,8 +66,7 @@ p {
 }
 
 section.section-comparison {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding: 5rem 0;
 }
 
 section.section-support {
@@ -77,7 +76,7 @@ section.section-support {
 
 .card {
   background-color: #1d1f4f;
-  color: rgb(196, 195, 195);
+  color: #fff;
   text-align: center;
   padding: 3rem;
   border-radius: 2rem;
@@ -93,6 +92,18 @@ section.section-support {
   padding: 1rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.text-dim {
+  color: rgb(196, 195, 195) !important;
+}
+
 .reduced-width {
   min-width: min(100%, var(--content-width));
   max-width: var(--content-width);
@@ -101,18 +112,36 @@ section.section-support {
 
 .bg-primary {
   background-color: #1d1f4f;
-  color: rgb(196, 195, 195);
+  color: #fff;
 }
 .bg-primary a {
-  color: rgb(196, 195, 195);
+  color: #fff;
 }
 
 .bg-secondary {
   background-color: #0f1326;
-  color: rgb(196, 195, 195);
+  color: #fff;
 }
 .bg-secondary a {
-  color: rgb(196, 195, 195);
+  color: #fff;
+}
+
+.bg-gradient {
+  background: linear-gradient(90deg, #cbfeda 0%, #97bdfd 100%);
+  color: #fff;
+}
+
+.btn {
+  border-radius: 5rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.btn-sm.btn {
+  padding: 0.3rem 1rem;
+}
+.btn-lg.btn {
+  padding: 1rem 4rem;
 }
 
 @media screen and (max-width: 800px) {
@@ -123,6 +152,9 @@ section.section-support {
   }
   .columns {
     flex-direction: column;
+  }
+  .section-support {
+    background-size: auto;
   }
 }
 
