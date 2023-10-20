@@ -20,6 +20,37 @@
         })(window, document, "script", "dataLayer", "GTM-MHQPVQD4");
     </script>
     <!-- End Google Tag Manager -->
+    <script>
+        window.addEventListener('load', function() {
+            const form = document.getElementById('form-container');
+            const contactWrapper = document.getElementById('contact-wrapper');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const data = new FormData(form);
+                const action = e.target.action;
+                fetch(action, {
+                    method: 'POST',
+                    body: data,
+                })
+                    .then(() => {
+                        contactWrapper.innerHTML = '<div id="thank-you-message">\n' +
+                            '          <h2>Thank you!</h2>\n' +
+                            '          <p>Your message has been sent.</p>\n' +
+                            '        </div>';
+                    })
+            })
+        })
+
+        // Script for hitting enter to submit
+        const emailInputField = document.querySelector('input[name="Email"]');
+
+        emailInputField.addEventListener('keyup', function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.querySelector('button[type="submit"]').click();
+            }
+        })
+    </script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -242,7 +273,7 @@
     </section>
 </article>
 <footer class="text-dim">
-    <div class="bg-primary">
+    <div class="footer-top bg-primary">
         <div class="columns reduced-width">
             <div class="column">
                 <h3>Support</h3>
@@ -273,7 +304,7 @@
                         <a href="#"><img class="footer-certificate" src="assets/images/Co2_Certificate.svg"></a>
                     </li>
                     <li>
-                        <a href="#"><img class="footer-certificate" src="assets/images/2015.png"></a>
+                        <a href="#"><img class="footer-certificate" src="assets/images/2013.png"></a>
                     </li>
                     <li>
                         <a href="#"><img class="footer-certificate" src="assets/images/2015.png"></a>
@@ -320,7 +351,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-secondary">
+    <div class="footer-bottom bg-secondary">
         <div class="columns">
             <div class="column center">
                 <a href="#"
@@ -330,8 +361,10 @@
             <div>
                 <a href="#">Terms & Conditions</a>
                 <a href="#">Privacy policy</a>
-                <a href="#"><img src="assets/images/swiss.png" alt="swiss made, swiss hosting"></a>
             </div>
+        </div>
+        <div>
+<!--            <a href="#"><img src="assets/images/swiss.png" alt="swiss made, swiss hosting"></a>-->
         </div>
     </div>
 </footer>

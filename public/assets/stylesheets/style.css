@@ -65,10 +65,6 @@ a {
   text-decoration: none;
 }
 
-p {
-  text-wrap: wrap;
-}
-
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -79,8 +75,21 @@ p {
 }
 
 .section-support {
-  background-image: url("../images/swiss_flag.png");
+  position: relative;
+}
+.section-support::after {
   background-size: cover;
+  content: "";
+  position: absolute;
+  background-image: url("../images/swiss_flag.png");
+  background-color: rebeccapurple;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .section-introduction {
@@ -96,7 +105,6 @@ p {
 }
 .section-introduction .swiss-logo {
   max-height: 7rem;
-  margin-bottom: 2rem;
 }
 .section-introduction h1 {
   margin-bottom: 1rem;
@@ -150,7 +158,6 @@ footer a, footer h3 {
 footer a:hover {
   color: #fff !important;
   text-decoration: underline;
-  font-weight: 700;
 }
 footer h3 {
   font-size: 1.2rem;
@@ -165,6 +172,13 @@ footer img {
 footer img.footer-certificate {
   display: inline-block;
   max-width: 5rem;
+}
+
+.footer-top a:hover {
+  font-weight: 700;
+}
+.footer-bottom {
+  padding: 2rem;
 }
 
 .section-certificate {
@@ -323,7 +337,7 @@ form label {
   padding: 1rem 4rem;
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
   :root {
     --content-width: 100%;
     --column-gap: 1rem;
@@ -332,30 +346,42 @@ form label {
   .columns:not(.keep-columns) {
     flex-direction: column;
   }
-  .section-support {
-    background-size: 200%;
-    background-position: 0 0;
-    color: black !important;
-    opacity: 0.5;
+  .section-introduction .deploio-logo {
+    margin: 0;
+    margin-top: -11rem;
+    min-height: 20rem;
+    object-fit: cover;
   }
   .section-certificate .certificate {
-    border-radius: 5rem;
+    border-radius: 2rem;
     padding: 1rem;
   }
   .section-certificate .hosted-on-deploio-logo {
     position: static;
     margin-bottom: 2rem;
-    margin-top: -5rem;
+    margin-top: -1rem;
   }
-  .section-introduction .deploio-logo {
-    margin: 0;
+  .section-support::after {
+    background-size: 200%;
+    background-position: 0 0;
+    opacity: 0.5;
+  }
+  footer .columns {
+    display: flex;
+    align-items: center;
+    text-align: center;
   }
   footer .footer-certifications ul,
   footer .footer-socials ul,
   footer .footer-providers ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+  }
+  footer .footer-providers ul {
+    flex-direction: column;
+  }
+  footer .footer-providers ul img {
+    max-height: 3rem;
   }
 }
 
