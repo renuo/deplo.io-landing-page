@@ -18,6 +18,7 @@ html,body {
 body {
   font-family: 'Montserrat', sans-serif;
   color: $bg-primary;
+  font-size: 1.3rem;
 }
 
 nav {
@@ -34,7 +35,7 @@ article {
 }
 
 section {
-  background-color: lightcoral;
+  // background-color: lightcoral;
 }
 
 footer {
@@ -59,17 +60,41 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
+}
 
-  li {
-    display: inline-block;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    background-color: $bg-primary;
-    color: $text-light;
-  }
+// Section Support
+
+.section-support {
+  background-image: url("../images/swiss_flag.png");
+  background-size: cover;
+}
+
+.section-introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.section-comparison {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+section.section-support {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 
 // Helpers
+
+.card {
+  background-color: $bg-primary;
+  color: $text-light;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 2rem;
+}
 
 .columns {
   display: flex;

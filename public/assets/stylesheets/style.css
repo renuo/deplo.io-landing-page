@@ -13,6 +13,7 @@ html, body {
 body {
   font-family: "Montserrat", sans-serif;
   color: #1d1f4f;
+  font-size: 1.3rem;
 }
 
 nav {
@@ -26,10 +27,6 @@ article {
   align-items: stretch;
   justify-content: stretch;
   gap: var(--section-gap);
-}
-
-section {
-  background-color: lightcoral;
 }
 
 footer {
@@ -55,12 +52,35 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 }
-.tech-grid li {
-  display: inline-block;
-  padding: 2rem;
-  border-radius: 0.5rem;
+
+.section-support {
+  background-image: url("../images/swiss_flag.png");
+  background-size: cover;
+}
+
+.section-introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.section-comparison {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+section.section-support {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.card {
   background-color: #1d1f4f;
   color: rgb(196, 195, 195);
+  text-align: center;
+  padding: 3rem;
+  border-radius: 2rem;
 }
 
 .columns {
