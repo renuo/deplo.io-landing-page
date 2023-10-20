@@ -114,6 +114,21 @@ footer h3 {
   margin-bottom: 1rem;
 }
 
+.certificate {
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  padding: 2rem;
+}
+.certificate-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: calc(-1 * var(--section-gap));
+}
+.certificate img {
+  max-height: 7rem;
+}
+
 .card {
   background-color: #1d1f4f;
   color: #fff;
@@ -144,6 +159,12 @@ footer h3 {
 }
 
 .align-center {
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 

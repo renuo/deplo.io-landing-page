@@ -134,6 +134,25 @@ footer {
   }
 }
 
+// Certificate, Images
+
+.certificate {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: calc(-1 * var(--section-gap));
+  }
+
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  padding: 2rem;
+
+  img {
+    max-height: 7rem;
+  }
+}
+
 // Helpers
 
 .card {
@@ -168,6 +187,12 @@ footer {
 }
 
 .align-center {
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
