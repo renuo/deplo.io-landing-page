@@ -340,6 +340,10 @@ form {
   max-width: var(--content-width);
   padding: 1rem;
   margin: auto auto;
+
+  img {
+    max-width: 100%;
+  }
 }
 
 .bg-primary {

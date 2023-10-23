@@ -234,6 +234,8 @@ form {
   max-width: var(--content-width);
   padding: 1rem;
   margin: auto auto; }
+  .reduced-width img {
+    max-width: 100%; }
 
 .bg-primary {
   background-color: #1d1f4f;
