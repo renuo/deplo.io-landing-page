@@ -190,8 +190,7 @@ form {
 
 /* src: oliver */
 .section-comparison {
-  display: flex;
-  overflow-x: scroll; }
+  display: flex; }
 
 table.comparison {
   flex-grow: 1;

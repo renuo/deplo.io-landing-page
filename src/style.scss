@@ -286,7 +286,6 @@ form {
 
 .section-comparison {
   display: flex;
-  overflow-x: scroll;
 }
 
 table.comparison {
@@ -304,7 +303,7 @@ table.comparison {
   thead {
     color: $bg-primary;
   }
-  
+
   tbody th {
     background-color: $bg-primary;
   }
