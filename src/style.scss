@@ -63,6 +63,10 @@ ul {
   list-style-type: none;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
 h2 {
   font-size: 2.3rem;
   font-weight: 800;
@@ -121,7 +125,7 @@ a {
   }
 
   .swiss-logo {
-    max-height: 7rem;
+    max-height: 10rem;
   }
 
   h1 {
@@ -202,6 +206,7 @@ footer {
     &.footer-certificate {
       display: inline-block;
       max-width: 5rem;
+      min-width: 5rem;
     }
   }
 }
@@ -286,6 +291,7 @@ form {
 
 .section-comparison {
   display: flex;
+  overflow-x: auto;
 }
 
 table.comparison {
@@ -454,7 +460,11 @@ table.comparison {
   :root {
     --content-width: 100%;
     --column-gap: 1rem;
-    --section-gap: 1rem;
+    --section-gap: 0rem;
+  }
+
+  h1 {
+    text-align: center;
   }
 
   .columns:not(.keep-columns) {
@@ -487,7 +497,12 @@ table.comparison {
     }
   }
 
-  .section-support {
+  section.section-support {
+    padding: 0;
+    .columns {
+      padding: 0      ;
+    }
+
     &::after {
       background-size: 250%;
       opacity: 0.5;
@@ -514,6 +529,7 @@ table.comparison {
       ul {
         display: flex;
         flex-direction: row;
+        gap: 1rem;
       }
     }
 

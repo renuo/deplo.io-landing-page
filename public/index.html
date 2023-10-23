@@ -124,7 +124,7 @@
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 <header>
-    <nav class="reduced-width columns align-center keep-columns">
+    <nav class="reduced-width columns align-center">
         <a
                 href="https://www.nine.ch/en/en/contactus-deploio"
                 class="btn btn-lg bg-primary"
@@ -405,17 +405,19 @@
                 method="POST"
                 action="https://script.google.com/macros/s/AKfycbwT1lwiqSW1clYKkuHFrjcXYyjpZD-mreglv8ZvKqP7e-HrTPE3YPPno6zEOtuKAysKbw/exec"
                 id="form-container"
-                class="center"
+                class="center columns"
         >
-            <input
-                    name="Email"
-                    type="email"
-                    placeholder="Email"
-                    required
-            />
+            <div class="column">
+                <input
+                        name="Email"
+                        type="email"
+                        placeholder="Email"
+                        required
+                />
+            </div>
             <button
                     type="submit"
-                    class="button-2 btn btn-lg bg-primary"
+                    class="button-2 btn btn-lg bg-primary column"
             >
                 Senden
             </button>
