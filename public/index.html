@@ -21,10 +21,11 @@
     </script>
     <!-- End Google Tag Manager -->
     <script>
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             const form = document.getElementById('form-container');
             const contactWrapper = document.getElementById('contact-wrapper');
-            form.addEventListener('submit', function(e) {
+            const thankYouMessageTemplate = document.getElementById('thank-you-message-template');
+            form.addEventListener('submit', function (e) {
                 e.preventDefault();
                 const data = new FormData(form);
                 const action = e.target.action;
@@ -33,10 +34,8 @@
                     body: data,
                 })
                     .then(() => {
-                        contactWrapper.innerHTML = '<div id="thank-you-message">\n' +
-                            '          <h2>Thank you!</h2>\n' +
-                            '          <p>Your message has been sent.</p>\n' +
-                            '        </div>';
+                        form.remove();
+                        contactWrapper.appendChild(thankYouMessageTemplate.content.cloneNode(true));
                     })
             })
         })
@@ -44,7 +43,7 @@
         // Script for hitting enter to submit
         const emailInputField = document.querySelector('input[name="Email"]');
 
-        emailInputField.addEventListener('keyup', function(event) {
+        emailInputField.addEventListener('keyup', function (event) {
             if (event.keyCode === 13) {
                 event.preventDefault();
                 document.querySelector('button[type="submit"]').click();
@@ -65,28 +64,6 @@
     >
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
-<!-- <header>
-    <nav>
-        <ul class="columns reduced-width align-center">
-            <li class="column btn btn-lg bg-primary">
-                <a href="https://www.nine.ch/en/en/contactus-deploio"
-                    >Jetzt Testen</a
-                >
-            </li>
-            <li class="column btn btn-sm bg-gradient">
-                <a
-                    href="https://cockpit.nine.ch/en/session/new?origin=%2F"
-                    >Sign In</a
-                >
-            </li>
-            <li class="column btn btn-sm bg-gradient">
-                <a href="https://www.nine.ch/en/en/contactus-deploio"
-                    >Sign Up</a
-                >
-            </li>
-        </ul>
-    </nav>
-</header> -->
 <header>
     <nav class="reduced-width columns align-center">
         <a
@@ -246,7 +223,7 @@
         </section>
     </div>
     <section id="contact-wrapper" class="section-contact reduced-width">
-        <h2 class="section-heading">Get in touch / Apply for beta access</h2>
+        <h2 class="section-heading">Kontakt aufnehmen / Beta-Zugang beantragen </h2>
         <form
                 method="POST"
                 action="https://script.google.com/macros/s/AKfycbwT1lwiqSW1clYKkuHFrjcXYyjpZD-mreglv8ZvKqP7e-HrTPE3YPPno6zEOtuKAysKbw/exec"
@@ -254,8 +231,14 @@
                 class="center"
         >
             <input name="Email" type="email" placeholder="Email" required>
-            <button type="submit" class="button-2 btn btn-lg bg-primary">Send</button>
+            <button type="submit" class="button-2 btn btn-lg bg-primary">Senden</button>
         </form>
+        <template id="thank-you-message-template">
+            <div id="thank-you-message">
+                <h2>Vielen Dank!</h2>
+                <p>Ihre Nachricht wurde abgesendet.</p>
+            </div>
+        </template>
     </section>
     <section class="section-support full-width">
         <div class="reduced-width columns">
@@ -352,7 +335,7 @@
         </div>
     </div>
     <div class="footer-bottom bg-secondary">
-        <div class="columns">
+        <div class="reduced-width columns">
             <div class="column center">
                 <a href="#"
                 >Copyright © 2023 Nine Internet Solutions AG</a
@@ -364,7 +347,7 @@
             </div>
         </div>
         <div>
-<!--            <a href="#"><img src="assets/images/swiss.png" alt="swiss made, swiss hosting"></a>-->
+            <!--            <a href="#"><img src="assets/images/swiss.png" alt="swiss made, swiss hosting"></a>-->
         </div>
     </div>
 </footer>
