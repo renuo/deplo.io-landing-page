@@ -407,8 +407,7 @@ form {
 
   .section-introduction {
     .deploio-logo {
-      margin: 0;
-      margin-top: -11rem;
+      margin: -11rem 0 0;
       min-height: 20rem;
       object-fit: cover;
     }
@@ -441,6 +440,12 @@ form {
   }
 
   footer {
+    line-height: 1;
+
+    li {
+      padding: 0.4rem 0;
+    }
+
     .columns {
       display: flex;
       align-items: center;
@@ -450,9 +455,6 @@ form {
     .footer-certifications,
     .footer-socials,
     .footer-providers {
-      //display: flex;
-      //align-items: center;
-      //justify-content: center;
       ul {
         display: flex;
         flex-direction: row;
