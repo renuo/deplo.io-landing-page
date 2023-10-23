@@ -317,6 +317,8 @@ form {
     footer .footer-providers ul {
       flex-direction: row; }
       footer .footer-providers ul img {
-        max-height: 3rem; } }
+        max-height: 3rem; }
+    footer .footer-bottom .copyright {
+      margin-bottom: 1rem; } }
 
 /*# sourceMappingURL=style.css.map */
