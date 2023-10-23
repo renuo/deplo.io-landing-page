@@ -286,6 +286,9 @@ form {
     min-height: 20rem;
     object-fit: cover; }
 
+  .btn {
+    font-size: 1rem; }
+
   .section-certificate .certificate {
     border-radius: 2rem;
     padding: 1rem; }
