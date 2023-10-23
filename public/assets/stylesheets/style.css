@@ -312,7 +312,7 @@ form {
     display: flex;
     flex-direction: row; }
   footer .footer-providers ul {
-    flex-direction: column; }
+    flex-direction: row; }
     footer .footer-providers ul img {
       max-height: 3rem; } }
 
