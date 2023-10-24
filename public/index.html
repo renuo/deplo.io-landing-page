@@ -85,6 +85,16 @@
             f.parentNode.insertBefore(j, f);
         })(window, document, "script", "dataLayer", "GTM-MHQPVQD4");
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11323234654"></script>
+    <script> window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'AW-11323234654'); </script>
     <!-- End Google Tag Manager -->
     <script>
         window.addEventListener("load", function () {
@@ -106,6 +116,7 @@
                     contactWrapper.appendChild(
                         thankYouMessageTemplate.content.cloneNode(true)
                     );
+                    gtag('event', 'conversion', {'send_to': 'AW-11323234654/N7bxCIDA2u8YEN6yq5cq'})
                 });
             });
         });
