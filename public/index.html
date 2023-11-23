@@ -109,11 +109,15 @@
     <script>
         window.addEventListener("load", function () {
             const form = document.getElementById("form-container");
-            const contactWrapper =
-                document.getElementById("contact-wrapper");
-            const thankYouMessageTemplate = document.getElementById(
-                "thank-you-message-template"
-            );
+            const contactWrapper = document.getElementById("contact-wrapper");
+            const formUpwards = document.getElementById("form-upwards");
+            const thankYouMessageTemplate = document.getElementById("thank-you-message-template");
+
+            // if parameter subscribe is set, move the contactWrapper within the formUpwards
+            if (window.location.search.includes("subscribe")) {
+                formUpwards.appendChild(contactWrapper);
+            }
+
             form.addEventListener("submit", function (e) {
                 e.preventDefault();
                 const data = new FormData(form);
@@ -180,6 +184,9 @@
             />
         </a>
         <div></div>
+    </div>
+    <div id="form-upwards">
+
     </div>
     <div class="section-tech columns reduced-width">
         <section class="column">
